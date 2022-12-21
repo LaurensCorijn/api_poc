@@ -1,12 +1,16 @@
-﻿namespace api_poc.Data
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace api_poc.Data
 {
     public class DataInitializer
     {
         private readonly DataContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
         
-        public DataInitializer(DataContext dbContext)
+        public DataInitializer(DataContext dbContext, UserManager<IdentityUser> userManager)
         {
             _context = dbContext;
+            _userManager = userManager;
         }
 
         public async Task InitializeData()

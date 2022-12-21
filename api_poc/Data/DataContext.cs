@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using api_poc.Models;
 using api_poc.Data.Mappers;
 
 namespace api_poc.Data
 {
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }

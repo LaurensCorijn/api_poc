@@ -1,7 +1,6 @@
 ﻿using api_poc.Models;
 using api_poc.Models.IService;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace api_poc.Data.Services
 {
