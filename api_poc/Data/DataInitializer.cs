@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using api_poc.Models;
 
 namespace api_poc.Data
 {
@@ -18,7 +19,14 @@ namespace api_poc.Data
             _context.Database.EnsureDeleted();
             if (_context.Database.EnsureCreated())
             {
+                var products = new List<Product>
+                {
+                    new Product("testName", "testImage", 29.0, "testDescription")
+                };
 
+                _context.Products.AddRange(products);
+
+                _context.SaveChanges();
             }
         }
     }
