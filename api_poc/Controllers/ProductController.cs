@@ -4,6 +4,10 @@ using api_poc.Models.IService;
 
 namespace api_poc.Controllers
 {
+    [ApiConventionType(typeof(DefaultApiConventions))]
+    [Produces("application/json")]
+    [Route("api/[controller]")]
+    [ApiController]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
