@@ -4,6 +4,7 @@
     {
         IEnumerable<Product> GetAll();
         Product GetById(int id);
+        void Add(Product product);
         void SaveChanges();
     }
 }

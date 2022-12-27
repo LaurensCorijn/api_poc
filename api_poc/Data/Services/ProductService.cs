@@ -25,6 +25,11 @@ namespace api_poc.Data.Services
             return _products.SingleOrDefault(p => p.Id == id);
         }
 
+        public void Add(Product product)
+        {
+            _products.Add(product);
+        }
+
         public void SaveChanges()
         {
             _dbContext.SaveChanges();
